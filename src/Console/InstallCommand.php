@@ -25,6 +25,7 @@ class InstallCommand extends Command
                     '@inertiajs/progress' => '^0.2.0',
                     'vue' => '^3.2.0',
                     'vue-axios' => '^3.4.1',
+                    'vue-tsc' => '^0.40.1',
                     'sass' => '^1.54.0',
                     'vite-plugin-checker' => '^0.4.9',
                     'typescript' => '^4.7.4',
@@ -66,6 +67,7 @@ class InstallCommand extends Command
 
         // Vite config..
         $this->info('Install Vite Config..');
+        (new Filesystem)->delete(base_path('vite.config.js'));
         (new Filesystem)->copy(__DIR__.'/../../stubs/vite.config.ts', base_path('vite.config.ts'));
 
         // TS config..
