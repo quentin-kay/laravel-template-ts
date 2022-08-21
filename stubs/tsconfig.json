@@ -1,0 +1,33 @@
+{
+    "compilerOptions": {
+        "target": "es2022",
+        "module": "es2022",
+        "strict": true,
+        "jsx": "preserve",
+        "importHelpers": true,
+        "moduleResolution": "node",
+        "skipLibCheck": true,
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+        "sourceMap": true,
+        "baseUrl": ".",
+        "paths": {
+            "/@/*": [
+                "resources/ts/*",
+            ],
+            "ziggy": [
+                "vendor/tightenco/ziggy/dist",
+            ],
+            "ziggy-vue": [
+                "vendor/tightenco/ziggy/dist/vue.m",
+            ],
+        },
+    },
+    "include": [
+        "resources/ts/**/*.ts",
+        "resources/ts/**/*.vue",
+    ],
+    "exclude": [
+        "node_modules"
+    ]
+}
